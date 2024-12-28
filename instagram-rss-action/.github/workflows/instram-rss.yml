@@ -1,7 +1,7 @@
 name: RSS
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "* * * * *"
   push:
 
 jobs:
@@ -17,7 +17,6 @@ jobs:
         with:
           yourInstagram: oyhorosh
           listOfInstagrams: miaboyko
-          fileName: instagram.json
       - name: Commit files
         if: ${{ success() && steps.rss.outputs.RSS_STATUS == 'success' }}
         run: |
