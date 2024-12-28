@@ -17,7 +17,7 @@ jobs:
         with:
           yourInstagram: oyhorosh
           listOfInstagrams: miaboyko
-      - name: Commit files
+      - name: instagram.json
         if: ${{ success() && steps.rss.outputs.RSS_STATUS == 'success' }}
         run: |
           git config --local user.email "action@github.com"
