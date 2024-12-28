@@ -17,10 +17,10 @@ jobs:
         with:
           yourInstagram: oyhorosh
           listOfInstagrams: miaboyko
-      - name: instagram.json
+      - name: Commit files
         if: ${{ success() && steps.rss.outputs.RSS_STATUS == 'success' }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -am "Updated instagram.json"
+          git commit -am "Updated insta.json"
           git push
